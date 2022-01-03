@@ -1,0 +1,5 @@
+site_name: PlusPortals API Documentation
+site_url: https://pryme-svg.github.io/plusportals_api_docs/
+nav:
+  - Home: index.md
+theme: readthedocs
