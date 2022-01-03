@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="None">
+  
+  <link rel="canonical" href="https://pryme-svg.github.io/plusportals_api_docs/">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>PlusPortals API Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Home";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = "/plusportals_api_docs/";
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> PlusPortals API Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href=".">Home</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#endpoints">Endpoints</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parentstudentdetailsgetmarkingperiod">/ParentStudentDetails/GetMarkingPeriod</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#showmarkingperiodbytype">/ShowMarkingPeriodByType</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#school_name">/SCHOOL_NAME</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parentstudentdetailsshowgridprogressinfo">/ParentStudentDetails/ShowGridProgressInfo</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parentstudentdetailsgetcourseworkdetailsbystudent">/ParentStudentDetails/GetCourseworkDetailsByStudent</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parentstudentdetailsshowscoresgridinfo">/ParentStudentDetails/ShowScoresGridInfo</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parentstudentdetailsgetperiodattendancebyspec">/ParentStudentDetails/GetPeriodAttendanceBySpec</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parentstudentdetailsshowattendancegridinfo">/ParentStudentDetails/ShowAttendanceGridInfo</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parentstudentdetailsgetperiodattendance">/ParentStudentDetails/GetPeriodAttendance/</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#elockergetsectionsforstudent">/ELocker/GetSectionsforStudent</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parentstudentdetailsgetschoollinksnfiles">/ParentStudentDetails/GetSchoolLinksNFiles</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#adminshowfolderforschoolresource">/Admin/ShowFolderForSchoolResource</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parentstudentdetailsloadsectiondropdown">/ParentStudentDetails/LoadSectionDropdown</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parentstudentdetailsgetcalendareventsstudent">/ParentStudentDetails/GetCalendarEventsStudent</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parentstudentdetailsshowclassdetails">/ParentStudentDetails/ShowClassDetails</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#teacherclassdetailsgetsectionclassfiles">/TeacherClassDetails/GetSectionClassFiles</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">PlusPortals API Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Home</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="unofficial-plusportals-api-documentation">Unofficial PlusPortals API Documentation</h1>
+<h2 id="endpoints">Endpoints</h2>
+<p>Root URL: <code>https://plusportals.com</code></p>
+<h3 id="parentstudentdetailsgetmarkingperiod"><code>/ParentStudentDetails/GetMarkingPeriod</code></h3>
+<p>Description: Get marking periods (semesters/trimesters/quarters)</p>
+<p>Method: <code>GET</code></p>
+<p>Headers Required: <code>(none)</code></p>
+<p>Cookies Required: </p>
+<pre><code>{
+    &quot;Request Cookies&quot;: {
+        &quot;__RequestVerificationToken&quot;: &quot;&quot;,
+        &quot;_pps&quot;: &quot;-480&quot;,
+        &quot;.ASPXAUTH&quot;: &quot;&quot;,
+        &quot;ASP.NET_SessionId&quot;: &quot;&quot;,
+        &quot;emailoption&quot;: &quot;&quot;,
+        &quot;ppschoollink&quot;: &quot;&quot;,
+        &quot;UGUID&quot;: &quot;&quot;,
+        &quot;UserSessionId&quot;: &quot;&quot;
+    }
+}
+</code></pre>
+<p>Response: <code>json</code></p>
+<pre><code>[
+  {
+    &quot;MarkingPeriodId&quot;: 0,
+    &quot;MarkingPeriodName&quot;: &quot;Please select...&quot;,
+    &quot;Description&quot;: &quot;Please select...&quot;,
+    &quot;IsChecked&quot;: false,
+    &quot;StudentId&quot;: {},
+    &quot;Narrative&quot;: null,
+    &quot;isCurrentmarkingPeriod&quot;: false,
+    &quot;Token&quot;: null,
+    &quot;AverageColumn&quot;: false,
+    &quot;GradeColumn&quot;: false,
+    &quot;ReportAndScorePermission&quot;: false,
+    &quot;CustomMessage&quot;: null,
+    &quot;IsEmail&quot;: false,
+    &quot;ShowClassesWithBlankAndSpaces&quot;: false
+  },
+  {
+    &quot;MarkingPeriodId&quot;: {},
+    &quot;MarkingPeriodName&quot;: &quot;{} &quot;,
+    &quot;Description&quot;: &quot;Semester {}&quot;,
+    &quot;IsChecked&quot;: false,
+    &quot;StudentId&quot;: {},
+    &quot;Narrative&quot;: null,
+    &quot;isCurrentmarkingPeriod&quot;: false,
+    &quot;Token&quot;: null,
+    &quot;AverageColumn&quot;: false,
+    &quot;GradeColumn&quot;: false,
+    &quot;ReportAndScorePermission&quot;: false,
+    &quot;CustomMessage&quot;: null,
+    &quot;IsEmail&quot;: false,
+    &quot;ShowClassesWithBlankAndSpaces&quot;: false
+  },
+  ...
+]
+</code></pre>
+<h3 id="showmarkingperiodbytype"><code>/ShowMarkingPeriodByType</code></h3>
+<p>Description: Get marking periods but omit "Please Select"</p>
+<p>Method: <code>GET</code></p>
+<p>Response: <code>json</code></p>
+<h3 id="school_name"><code>/SCHOOL_NAME</code></h3>
+<p>Description: Login</p>
+<p>Method: <code>POST</code></p>
+<p>Payload:</p>
+<pre><code>payload = {
+    'UserName': email,
+    'Password': password,
+    'RememberMe': 'true',
+    'btnsumit': 'Sign In'
+}
+</code></pre>
+<p>Response: cookies</p>
+<pre><code>&quot;Response Cookies&quot;: {
+    &quot;emailoption&quot;: {
+        &quot;expires&quot;: &quot;2021-12-26T01:56:56.000Z&quot;,
+        &quot;httpOnly&quot;: true,
+        &quot;path&quot;: &quot;/&quot;,
+        &quot;value&quot;: &quot;RecentEmails&quot;
+    },
+    &quot;ppschoollink&quot;: {
+        &quot;expires&quot;: &quot;2021-12-26T01:56:56.000Z&quot;,
+        &quot;httpOnly&quot;: true,
+        &quot;path&quot;: &quot;/&quot;,
+        &quot;value&quot;: &quot;SCHOOL_NAME&quot;
+    },
+    &quot;UserSessionId&quot;: {
+        &quot;expires&quot;: &quot;2021-12-24T01:56:56.000Z&quot;,
+        &quot;path&quot;: &quot;/&quot;,
+        &quot;value&quot;: &quot;&quot;
+    }
+}
+</code></pre>
+<h3 id="parentstudentdetailsshowgridprogressinfo"><code>/ParentStudentDetails/ShowGridProgressInfo</code></h3>
+<p>Description: Get Grades</p>
+<p>Method: <code>POST</code></p>
+<p>Cookies Required:</p>
+<pre><code>_pps: '-480'
+ppschoollink
+UGUID
+__RequestVerificationToken (from cookies)
+ASP.NET_SessionID
+emailoption
+.ASPXAUTH
+UserSessionId
+</code></pre>
+<p>All of the cookies above can be retrieved from <code>Login</code> except <code>_pps</code></p>
+<p>Headers Required:</p>
+<pre><code>'X-NewRelic-ID': 'XQEDUV5SGwUDXFhXBQc=',
+'__RequestVerificationToken': {},
+'X-Requested-With': 'XMLHttpRequest'
+</code></pre>
+<blockquote>
+<p>IMPORTANT: RequestVerificationToken in headers is retrieved from the html, not the cookies. It is of the form <code>&lt;input name="__RequestVerificationToken" type="hidden" value={}&gt;</code></p>
+</blockquote>
+<p>Params (optional):</p>
+<pre><code>'markingPeriodId': {},
+'isGroup': true/false
+</code></pre>
+<p>Response: <code>json</code></p>
+<pre><code class="language-json">{
+    &quot;Data&quot;: [{
+        &quot;CourseId&quot;: 0, # this is always 0, probably bug
+        &quot;CourseName&quot;: &quot;&quot;,
+        &quot;Average&quot;: int,
+        &quot;GradeSymbol&quot;: &quot;A  &quot;,
+        &quot;StaffName&quot;: null,
+        &quot;MarkingPeriodId&quot;: 0,
+        &quot;StudentId&quot;: int,
+        &quot;SectionId&quot;: int,
+        &quot;IsWithdrawnCourse&quot;: false,
+        &quot;StaffEmailId&quot;: null,
+        &quot;ShowClassesWithBlankAndSpaces&quot;: false
+    }, {
+        ...
+    }],
+    &quot;Total&quot;: int,
+    &quot;AggregateResults&quot;: null,
+    &quot;Errors&quot;: null
+}
+</code></pre>
+<h3 id="parentstudentdetailsgetcourseworkdetailsbystudent"><code>/ParentStudentDetails/GetCourseworkDetailsByStudent</code></h3>
+<p>Description: Get Coursework</p>
+<p>Method: <code>POST</code></p>
+<p>Cookies Required: </p>
+<pre><code>&quot;__RequestVerificationToken&quot;: &quot;&quot; (from cookies),
+&quot;_pps&quot;: &quot;-480&quot;,
+&quot;.ASPXAUTH&quot;: &quot;&quot;,
+&quot;ASP.NET_SessionId&quot;: &quot;&quot;,
+&quot;emailoption&quot;: &quot;&quot;,
+&quot;ppschoollink&quot;: &quot;&quot;,
+&quot;UGUID&quot;: &quot;&quot;,
+&quot;UserSessionId&quot;: &quot;&quot;
+</code></pre>
+<p>Payload:</p>
+<pre><code class="language-json">{
+    &quot;sort&quot;: &quot;&quot;,
+    &quot;page&quot;: &quot;1&quot;,
+    &quot;pageSize&quot;: &quot;20&quot;,
+    &quot;group&quot;: &quot;&quot;,
+    &quot;filter&quot;: &quot;&quot;,
+    &quot;studentId&quot;: &quot;{}&quot;,
+    &quot;sectionId&quot;: &quot;0&quot;,
+    &quot;courseworkRange&quot;: &quot;1-5&quot;,
+    &quot;courseworkType&quot;: &quot;All+Types&quot;
+}
+</code></pre>
+<p>courseworkRange:</p>
+<pre><code>&quot;Upcoming Coursework&quot;: 1,
+&quot;Past Due Coursework&quot;: 2,
+&quot;Pending Coursework&quot;: 3,
+&quot;Completed Coursework&quot;: 4,
+&quot;All Coursework&quot;: 5
+</code></pre>
+<p>sort:</p>
+<pre><code>&quot;Class-asc&quot;
+&quot;Class-desc&quot;
+&quot;Title-asc&quot;
+&quot;Title-desc&quot;
+&quot;Description-asc&quot;
+&quot;Description-desc&quot;
+&quot;Type-asc&quot;
+&quot;Type-desc&quot;
+&quot;DueDate-asc&quot;
+&quot;DueDate-desc&quot;
+</code></pre>
+<p>courseworkType:</p>
+<pre><code>All Types: &quot;All+Types&quot;
+Assignments: &quot;Assignments&quot;,
+Quizzes: &quot;Quizzes&quot;
+</code></pre>
+<p>sectionId is the ID of the class which you would like to see. Can be retrieved from <a href="#parentstudentdetailsshowgridprogressinfo">Grades</a>.</p>
+<h3 id="parentstudentdetailsshowscoresgridinfo"><code>/ParentStudentDetails/ShowScoresGridInfo</code></h3>
+<p>Description: Get grades for all assignments</p>
+<p>Method: <code>POST</code></p>
+<p>Response: <code>json</code></p>
+<blockquote>
+<p>!! Note: the class that grades are shown for is affected by the last <code>/ParentStudentDetails/ShowScoresDetails</code> request</p>
+</blockquote>
+<h3 id="parentstudentdetailsgetperiodattendancebyspec"><code>/ParentStudentDetails/GetPeriodAttendanceBySpec</code></h3>
+<p>Method: <code>POST</code></p>
+<p>Response: <code>json</code></p>
+<pre><code>{
+  &quot;Data&quot;: [
+    {
+      &quot;AttendanceCount&quot;: int,
+      &quot;AttendanceDescription&quot;: &quot;ABSENCE EX&quot;,
+      &quot;AttendanceDate&quot;: &quot;/Date(-int)/&quot;
+    },
+    {
+    ...
+    }
+  ],
+  &quot;Total&quot;: int,
+  &quot;AggregateResults&quot;: null,
+  &quot;Errors&quot;: null
+}
+</code></pre>
+<h3 id="parentstudentdetailsshowattendancegridinfo"><code>/ParentStudentDetails/ShowAttendanceGridInfo</code></h3>
+<p>Description: Daily Attendance tab</p>
+<p>Method: <code>POST</code></p>
+<p>Response: <code>json</code></p>
+<h3 id="parentstudentdetailsgetperiodattendance"><code>/ParentStudentDetails/GetPeriodAttendance/</code></h3>
+<p>Description: Period Attendance Tab</p>
+<p>Method: <code>GET</code></p>
+<p>Response: <code>html</code></p>
+<h3 id="elockergetsectionsforstudent"><code>/ELocker/GetSectionsforStudent</code></h3>
+<p>Method: <code>POST</code></p>
+<p>Response: <code>json</code></p>
+<p>Params:</p>
+<pre><code>
+studentId: {}
+</code></pre>
+<p>Response: <code>json</code></p>
+<pre><code>[
+  {
+    &quot;Disabled&quot;: false,
+    &quot;Group&quot;: null,
+    &quot;Selected&quot;: false,
+    &quot;Text&quot;: &quot;All Classes&quot;,
+    &quot;Value&quot;: &quot;0&quot;
+  },
+  {
+    &quot;Disabled&quot;: false,
+    &quot;Group&quot;: null,
+    &quot;Selected&quot;: false,
+    &quot;Text&quot;: &quot;&quot;,
+    &quot;Value&quot;: &quot;&quot;
+  },
+  {
+      ...
+  }
+]
+</code></pre>
+<h3 id="parentstudentdetailsgetschoollinksnfiles"><code>/ParentStudentDetails/GetSchoolLinksNFiles</code></h3>
+<p>Method: <code>POST</code></p>
+<p>Payload: </p>
+<pre><code>{
+    &quot;sort&quot;: &quot;&quot;,
+    &quot;group&quot;: &quot;&quot;,
+    &quot;filter&quot;: &quot;&quot;,
+    &quot;labelTagId&quot;: &quot;&quot;,
+    &quot;gradeLevel&quot;: &quot;int&quot;
+}
+</code></pre>
+<p>Response:</p>
+<pre><code class="language-json">{
+  &quot;Data&quot;: [
+    {
+      &quot;IsLink&quot;: true,
+      &quot;LinkText&quot;: &quot;&quot;,
+      &quot;LinkURL&quot;: &quot;&quot;,
+      &quot;DateAdded&quot;: &quot;/Date(-62135596800000)/&quot;,
+      &quot;SchoolID&quot;: 0,
+      &quot;YearID&quot;: 0,
+      &quot;IsDeleted&quot;: false,
+      &quot;ModifiedBy&quot;: 0,
+      &quot;LastModifiedOn&quot;: &quot;/Date(-62135596800000)/&quot;,
+      &quot;ID&quot;: int,
+      &quot;SectionId&quot;: null,
+      &quot;SectionFileName&quot;: null,
+      &quot;Description&quot;: &quot;&quot;,
+      &quot;Comments&quot;: null,
+      &quot;StorageFileName&quot;: null,
+      &quot;StorageFilePath&quot;: null,
+      &quot;IsArchived&quot;: false,
+      &quot;resourceType&quot;: null
+    },
+    {
+        ...
+    }
+  ],
+  &quot;Total&quot;: int,
+  &quot;AggregateResults&quot;: null,
+  &quot;Errors&quot;: null
+}
+</code></pre>
+<h3 id="adminshowfolderforschoolresource"><code>/Admin/ShowFolderForSchoolResource</code></h3>
+<p>Description: Get school folders</p>
+<p>Method: <code>GET</code></p>
+<p>Response: <code>json</code></p>
+<pre><code>[
+    {
+        &quot;LabelTagID&quot;: 0,
+        &quot;LabelTagDescription&quot;: &quot;School Folder&quot;,
+        &quot;LabelTagType&quot;: null,
+        &quot;LastModifiedBy&quot;: 0,
+        &quot;SectionID&quot;: null,
+        &quot;CustomGroupID&quot;: null,
+        &quot;isGroup&quot;: false,
+        &quot;UnitID&quot;: null,
+        &quot;IsSchoolResource&quot;: false
+    },
+    {
+        ...
+    },
+</code></pre>
+<h3 id="parentstudentdetailsloadsectiondropdown"><code>/ParentStudentDetails/LoadSectionDropdown</code></h3>
+<p>Description: Get Course info</p>
+<p>Method: <code>GET</code></p>
+<p>Params: </p>
+<pre><code>&quot;isGroup&quot;: &quot;false&quot;
+</code></pre>
+<p>Response: <code>json</code></p>
+<pre><code>[
+    {
+        &quot;CourseId&quot;: int,
+        &quot;Name&quot;: &quot;&quot;,
+        &quot;Teacher&quot;: &quot;&quot;,
+        &quot;Room&quot;: &quot;69420&quot;,
+        &quot;MeetingTime&quot;: &quot;F&quot;,
+        &quot;ClassLength&quot;: &quot;All Year&quot;,
+        &quot;SectionType&quot;: &quot;N&quot;
+    },
+    {
+        ...
+    }
+]
+</code></pre>
+<h3 id="parentstudentdetailsgetcalendareventsstudent"><code>/ParentStudentDetails/GetCalendarEventsStudent</code></h3>
+<p>Method: <code>POST</code></p>
+<p>Params: Get calendar events</p>
+<pre><code>isGroup: &quot;False&quot;
+</code></pre>
+<p>Payload:</p>
+<pre><code>{
+    &quot;sort&quot;: &quot;&quot;,
+    &quot;group&quot;: &quot;&quot;,
+    &quot;filter&quot;: &quot;&quot;
+}
+</code></pre>
+<p>Response: <code>json</code></p>
+<pre><code>{
+    &quot;Data&quot;: [
+        {
+            &quot;MessageId&quot;: int,
+            &quot;Title&quot;: null,
+            &quot;Description&quot;: &quot;&quot;,
+            &quot;Date&quot;: &quot;12-31-2021&quot;,
+            &quot;EndDate&quot;: &quot;12-31-2021&quot;,
+            &quot;IsAlert&quot;: false,
+            &quot;NotificationFilesCount&quot;: 0,
+            &quot;NotificationFiles&quot;: null,
+            &quot;GoogleCalendarId&quot;: null,
+            &quot;GoogleCalendarName&quot;: null,
+            &quot;EventIsReccurrence&quot;: false,
+            &quot;IsAllDayEvent&quot;: true,
+            &quot;ParsedRecurrenceStartDate&quot;: &quot;12-31-2021&quot;,
+            &quot;ParsedRecurrenceEndDate&quot;: &quot;12-31-2021&quot;,
+            &quot;EventStartDate&quot;: &quot;/Date(1640563200000)/&quot;,
+            &quot;CalendarType&quot;: null
+        },
+        {
+            ...
+        },
+    ],
+    &quot;Total&quot;: int,
+    &quot;AggregateResults&quot;: null,
+    &quot;Errors&quot;: null
+}
+</code></pre>
+<hr />
+<p>In Class stuff</p>
+<h3 id="parentstudentdetailsshowclassdetails"><code>/ParentStudentDetails/ShowClassDetails</code></h3>
+<p>Params: </p>
+<pre><code>sectionId: &quot;&quot;,
+groupId: &quot;0&quot;
+</code></pre>
+<p>Response: <code>html</code></p>
+<h3 id="teacherclassdetailsgetsectionclassfiles"><code>/TeacherClassDetails/GetSectionClassFiles</code></h3>
+<p>Method: <code>POST</code></p>
+<p>The response of this depends on the last <code>ShowClassDetails</code> call. The last accessed with <code>ShowClassDetails</code> will have their files returned.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme_extra.js" defer></script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.2.3
+Build Date UTC : 2022-01-03 20:20:05.897357+00:00
+-->
